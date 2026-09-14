@@ -13,19 +13,19 @@
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header"><div class="header-inner"><a class="wordmark" href="index.html" aria-label="CIS 6270 home"><span class="course-mark" aria-hidden="true">6270</span><span class="wordmark-text"><strong>CIS 6270</strong><span>Penn Engineering · CIS</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" data-site-nav aria-label="Primary navigation"><a href="index.html" data-nav-page="home">Home</a><a href="syllabus.html" data-nav-page="syllabus">Course Info</a><a href="schedule.html" data-nav-page="schedule">Syllabus</a><a href="assignments.html" data-nav-page="assignments">Assignments</a><a href="lectures.html" data-nav-page="lectures">Lectures</a><a href="staff.html" data-nav-page="staff">Staff</a><a href="resources.html" data-nav-page="resources">Resources</a><a class="nav-primary" href="https://canvas.upenn.edu/courses/1948454" target="_blank" rel="noopener noreferrer">Canvas<span class="sr-only"> (opens in a new tab)</span></a></nav></div></header>
   <main id="main">
-    <section class="page-hero"><div class="container"><p class="eyebrow">Fall 2026</p><h1>Course information</h1><p>Course goals, assessment structure, expectations, and policies. For the complete official wording, use the downloadable syllabus.</p><div class="button-row"><a class="button button-primary" href="https://drive.google.com/file/d/1MDUBUxkUyb66q6WP-e50LqNZuSPGdjSC/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download official PDF<span class="sr-only"> (opens in a new tab)</span></a><a class="button button-secondary" href="schedule.html">View syllabus</a></div></div></section>
+    <section class="page-hero"><div class="container"><p class="eyebrow">Fall 2026</p><h1>Course information</h1><p>Course goals, assessment structure, expectations, and policies. For the complete official wording, use the downloadable syllabus.</p><div class="button-row"><a class="button button-primary" href="assets/docs/cis6270-syllabus-fall-2026.pdf" target="_blank" rel="noopener noreferrer">Download official PDF<span class="sr-only"> (opens in a new tab)</span></a><a class="button button-secondary" href="schedule.html">View syllabus</a></div></div></section>
     <section class="content-section"><div class="container narrow prose">
       <p class="lead">Generative models operate on continuous and discrete state spaces. This course develops their mathematical, algorithmic, and empirical foundations, with discrete state modeling as the central focus.</p>
       <div class="notice"><strong>Course logistics:</strong> Tuesdays and Thursdays, 8:30–10:00 a.m. in Towne 337. Fall 2026.</div>
 
       <h2>Course structure</h2>
-      <p>The semester moves through four connected units: mathematical foundations of generative transport; continuous generative models; discrete stochastic processes and generative frameworks; and optimal transport with stochastic control. Derivations are paired with coding workshops, empirical evaluation, and applications to DNA, RNA, peptides, proteins, language, code, and images.</p>
+      <p>The semester progresses from mathematical foundations and continuous probability transport through continuous diffusion, discrete diffusion, discrete flow matching, one-step and few-step flow maps, and finally optimal transport and Schrödinger bridges. Derivations are paired with worked numerical examples, implementations, empirical evaluation, and guidance procedures.</p>
 
       <h2>Learning objectives</h2>
       <ol>
         <li>Develop a rigorous understanding of probability, the simplex, continuous-time Markov chains, the master equation, and generative transport.</li>
         <li>Derive, analyze, and implement classical generative models, discrete diffusion, discrete flow matching, optimal transport, stochastic control, and discrete Schrödinger bridges.</li>
-        <li>Apply these frameworks to biological sequences and other discrete data.</li>
+        <li>Apply these frameworks across biological sequences and structures, images, audio, natural language, code, graphs, point clouds, 3D molecular data, probability-simplex representations, and continuous latent representations.</li>
         <li>Translate mathematical specifications into implementations and evaluate them with benchmarks and ablations.</li>
         <li>Read current research and design, communicate, and defend novel discrete generative modeling strategies.</li>
       </ol>
@@ -46,16 +46,20 @@
       <p>There is no curve. Final percentages use the traditional scale described in the official syllabus. Grades are posted in Canvas.</p>
 
       <h3>Participation</h3>
-      <p>Participation includes contributions to lecture derivations, algorithm-design sessions, and coding workshops. Students should arrive on time and must arrive by 8:40 a.m. to be marked present. See the official syllabus for absence and documentation rules.</p>
+      <p>Participation includes contributions to lecture derivations, algorithm-design sessions, and implementation examples. Students must arrive by 8:40 a.m. to be marked present; arrivals beginning at 8:41 a.m. count as absent. Each unexcused absence reduces the final grade by one point, or by 0.5 points when reported at least one week in advance.</p>
 
       <h3>Exams</h3>
       <p>Two closed-book written exams, worth 15% each, emphasize mathematical reasoning, proofs, derivations, stochastic-process analysis, and algorithm design. One reference sheet is allowed.</p>
+      <ul>
+        <li><strong>Exam 1:</strong> material taught August 25 through September 29, including mathematical foundations, flow matching, continuous diffusion and guidance, masked diffusion, and MDLM.</li>
+        <li><strong>Exam 2:</strong> cumulative material taught August 25 through November 12, adding discrete diffusion, discrete flow matching, simplex and Gumbel-softmax flows, multi-objective guidance, and latent, discrete, expanding, and stochastic flow maps.</li>
+      </ul>
 
       <h3>Group projects</h3>
       <ul>
-        <li><strong>Project 1 — NeurIPS Workshop (15%):</strong> an empirical study focused on execution, benchmarking, ablation, and quantitative evaluation.</li>
-        <li><strong>Project 2 — ICLR Workshop (20%):</strong> implementation and theoretical analysis of established discrete generative modeling frameworks.</li>
-        <li><strong>Final Project — ICML Main Conference (25%):</strong> a novel method applied to a biological sequence design problem, with a complete code repository and ICML-style paper.</li>
+        <li><strong>Project 1 — Continuous Generative Models (15%):</strong> a two-modality comparison of continuous flow matching and diffusion, including guided generation and an ablated methodological innovation transferred across modalities.</li>
+        <li><strong>Project 2 — Discrete Generative Models Workshop (20%):</strong> a guided discrete generative model evaluated with appropriate baselines, quantitative measures, guidance-strength analyses, and controlled ablations in ICLR workshop format.</li>
+        <li><strong>Final Project — ICML-Ready Paper (25%):</strong> an extension of Project 1, Project 2, or both into a coherent contribution supported by theory, baselines, ablations, multi-seed experiments, guidance analyses, and cross-setting validation.</li>
       </ul>
       <p>Every project concludes with a 30-minute group defense: a 10-minute presentation and 20 minutes of questions from the teaching team.</p>
 
@@ -64,13 +68,14 @@
 
       <h2>Student support and accommodations</h2>
       <p>Students experiencing academic or personal difficulties are encouraged to contact Professor Chatterjee or attend office hours. The Weingarten Center provides academic support and coordinates disability accommodations. Student Health and Counseling provides physical and mental-health support, including 24/7 assistance at 215-898-7021.</p>
+      <p>Request disability or medical accommodations through the Weingarten Center as early as possible. Absences are accommodated with the appropriate documentation for incapacitating illness or injury, personal emergencies, religious observances, University athletic obligations, and required court or legal appearances.</p>
 
       <h2>Academic integrity</h2>
       <p>Students are expected to uphold Penn’s Code of Academic Integrity, including its standards for honesty, attribution, collaboration, and responsible conduct. Ask the teaching team whenever expectations for an assignment, exam, or group project are unclear.</p>
 
-      <div class="notice"><strong>Official policy:</strong> This web page is a student-friendly summary. The <a href="https://drive.google.com/file/d/1MDUBUxkUyb66q6WP-e50LqNZuSPGdjSC/view?usp=sharing" target="_blank" rel="noopener noreferrer">official syllabus PDF<span class="sr-only"> (opens in a new tab)</span></a> and Canvas control if any wording differs.</div>
+      <div class="notice"><strong>Official policy:</strong> This web page is a student-friendly summary. The <a href="assets/docs/cis6270-syllabus-fall-2026.pdf" target="_blank" rel="noopener noreferrer">official syllabus PDF<span class="sr-only"> (opens in a new tab)</span></a> and Canvas control if any wording differs.</div>
     </div></section>
   </main>
-  <footer class="site-footer"><div class="container footer-grid"><div><strong>CIS 6270 · Discrete Generative Models</strong><p>Fall 2026 · University of Pennsylvania. Canvas is the source of truth for announcements, submissions, grades, and restricted course materials.</p></div><p><a href="archive.html">Semester archive</a> · Updated September 13, 2026</p></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><strong>CIS 6270 · Discrete Generative Models</strong><p>Fall 2026 · University of Pennsylvania. Canvas is the source of truth for announcements, submissions, grades, and restricted course materials.</p></div><p><a href="archive.html">Semester archive</a> · Updated September 14, 2026</p></div></footer>
 </body>
 </html>

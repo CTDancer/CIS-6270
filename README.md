@@ -25,6 +25,8 @@ Most recurring course content lives in [`assets/js/course-data.js`](assets/js/co
 
 The longer course-information summary is maintained in [`syllabus.html`](syllabus.html), while the dated syllabus is rendered in [`schedule.html`](schedule.html). Update the `updated` date in the course data and the visible footer date when publishing a meaningful content change.
 
+The approved downloadable syllabus is stored at [`assets/docs/cis6270-syllabus-fall-2026.pdf`](assets/docs/cis6270-syllabus-fall-2026.pdf). Replace that file when a new approved revision is issued, and then reconcile the public HTML and course data with the revised PDF.
+
 ## Public-material rule
 
 Only publish material approved for unrestricted public access. Keep the following in Canvas or another Penn-authenticated system unless the instructor explicitly approves publication:
