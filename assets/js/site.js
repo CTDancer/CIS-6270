@@ -13,10 +13,24 @@
     return `<a class="${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in a new tab)</span></a>`;
   }
 
+  function materialDates(lecture) {
+    if (Array.isArray(lecture.dates)) return lecture.dates;
+    return lecture.isoDate ? [lecture.isoDate] : [];
+  }
+
+  function shortDate(isoDate) {
+    return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
+      .format(new Date(`${isoDate}T12:00:00Z`));
+  }
+
   function scheduleMaterials(item) {
-    const lecture = data.lectures.find((entry) => entry.isoDate === item.date);
+    const lecture = data.lectures.find((entry) => materialDates(entry).includes(item.date));
     if (!lecture || !lecture.links.length) return '<span class="muted">—</span>';
-    return lecture.links.map((link) => externalLink(link.url, link.label, "mini-link")).join("");
+    const dates = materialDates(lecture);
+    const sharedLabel = dates.length > 1
+      ? `<span class="material-note">Shared · ${dates.map(shortDate).join(" &amp; ")}</span>`
+      : "";
+    return sharedLabel + lecture.links.map((link) => externalLink(link.url, link.label, "mini-link")).join("");
   }
 
   function renderSchedule() {

@@ -271,6 +271,7 @@ section { scroll-margin-top: 4.4rem; }
 .type-review { color: #365174; }
 .schedule-milestone { margin-top: 0.5rem; color: var(--penn-red); font-size: 0.78rem; font-style: normal; font-weight: 500; }
 .materials-cell { width: 9rem; }
+.material-note { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.35; }
 .mini-link { display: block; margin-bottom: 0.25rem; color: var(--penn-red); font-size: 0.75rem; font-weight: 700; }
 .muted { color: #8a93a5; }
 

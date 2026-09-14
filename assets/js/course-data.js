@@ -76,7 +76,7 @@ window.COURSE_DATA = {
   lectures: [
     {
       number: 1,
-      isoDate: "2026-08-25",
+      dates: ["2026-08-25"],
       date: "August 25, 2026",
       title: "Probability Foundations",
       links: [
@@ -85,7 +85,7 @@ window.COURSE_DATA = {
     },
     {
       number: 2,
-      isoDate: "2026-08-27",
+      dates: ["2026-08-27"],
       date: "August 27, 2026",
       title: "The Probability Simplex and Linear Algebra",
       links: [
