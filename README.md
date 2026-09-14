@@ -23,7 +23,7 @@ Most recurring course content lives in [`assets/js/course-data.js`](assets/js/co
 - `assignments`: project descriptions, due dates, and Canvas destinations
 - `staff`: teaching-team contact information and office hours
 
-The longer syllabus summary is maintained in [`syllabus.html`](syllabus.html). Update the `updated` date in the course data and the visible footer date when publishing a meaningful content change.
+The longer course-information summary is maintained in [`syllabus.html`](syllabus.html), while the dated syllabus is rendered in [`schedule.html`](schedule.html). Update the `updated` date in the course data and the visible footer date when publishing a meaningful content change.
 
 ## Public-material rule
 

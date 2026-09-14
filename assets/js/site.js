@@ -45,7 +45,7 @@
       <h2>${escapeHtml(next.title)}</h2>
       <p>${escapeHtml(next.details)}</p>
       ${next.milestone ? `<p class="milestone"><span>Milestone</span>${escapeHtml(next.milestone)}</p>` : ""}
-      <a class="arrow-link" href="schedule.html">View the full schedule <span aria-hidden="true">→</span></a>`;
+      <a class="arrow-link" href="schedule.html">View the full syllabus <span aria-hidden="true">→</span></a>`;
   }
 
   function renderSchedule() {
