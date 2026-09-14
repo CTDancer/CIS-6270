@@ -72,6 +72,7 @@
     let visible = true;
     let width = 0;
     let height = 0;
+    const animationStart = performance.now();
 
     function seeded(index, salt) {
       const value = Math.sin(index * 9283.17 + salt * 317.41) * 43758.5453;
@@ -83,9 +84,11 @@
       tiles = Array.from({ length: count }, (_, index) => ({
         x: seeded(index, 1) * width,
         y: seeded(index, 2) * height,
-        size: 18 + seeded(index, 3) * 58,
+        size: 14 + seeded(index, 3) * 62,
         phase: seeded(index, 4) * Math.PI * 2,
-        speed: 0.55 + seeded(index, 5) * 0.85,
+        velocityX: 8 + seeded(index, 5) * 13,
+        velocityY: -4 - seeded(index, 6) * 9,
+        sway: 12 + seeded(index, 7) * 24,
         red: index % 7 === 0,
         round: index % 5 === 0
       }));
@@ -111,15 +114,48 @@
 
     function draw(timestamp, still = false) {
       context.clearRect(0, 0, width, height);
-      const time = still ? 0 : timestamp * 0.00018;
+      const time = still ? 0 : (timestamp - animationStart) / 1000;
+      const spanX = width + 180;
+      const spanY = height + 180;
+      const positions = tiles.map((tile) => ({
+        x: ((tile.x + time * tile.velocityX + tile.size + 90) % spanX) - tile.size - 90,
+        y: ((tile.y + time * tile.velocityY + Math.sin(time * 0.48 + tile.phase) * tile.sway + tile.size + 90) % spanY + spanY) % spanY - tile.size - 90
+      }));
 
-      tiles.forEach((tile) => {
-        const driftX = Math.sin(time * tile.speed + tile.phase) * 22;
-        const driftY = Math.cos(time * tile.speed * 0.8 + tile.phase) * 16;
-        const pulse = 0.72 + Math.sin(time * 1.4 + tile.phase) * 0.18;
-        const alpha = (tile.red ? 0.065 : 0.075) * pulse;
+      const glowX = width * (0.6 + Math.sin(time * 0.22) * 0.12);
+      const glowY = height * (0.45 + Math.cos(time * 0.18) * 0.15);
+      const glowRadius = Math.max(260, Math.min(width, height) * 0.62);
+      const glow = context.createRadialGradient(glowX, glowY, 0, glowX, glowY, glowRadius);
+      glow.addColorStop(0, "rgba(64, 105, 190, 0.11)");
+      glow.addColorStop(1, "rgba(64, 105, 190, 0)");
+      context.fillStyle = glow;
+      context.fillRect(0, 0, width, height);
+
+      positions.forEach((position, index) => {
+        for (let offset = 1; offset <= 5; offset += 1) {
+          const other = positions[(index + offset) % positions.length];
+          const distance = Math.hypot(other.x - position.x, other.y - position.y);
+          if (distance > 165) continue;
+          context.beginPath();
+          context.moveTo(position.x, position.y);
+          context.lineTo(other.x, other.y);
+          context.strokeStyle = `rgba(116, 149, 211, ${(1 - distance / 165) * 0.075})`;
+          context.lineWidth = 1;
+          context.stroke();
+        }
+      });
+
+      tiles.forEach((tile, index) => {
+        const position = positions[index];
+        const pulse = 0.76 + Math.sin(time * 1.15 + tile.phase) * 0.24;
+        const alpha = (tile.red ? 0.115 : 0.135) * pulse;
         context.fillStyle = tile.red ? `rgba(189, 48, 48, ${alpha})` : `rgba(84, 119, 187, ${alpha})`;
-        roundedRect(tile.x + driftX, tile.y + driftY, tile.size, tile.round ? tile.size / 2 : tile.size * 0.24);
+        context.save();
+        context.translate(position.x + tile.size / 2, position.y + tile.size / 2);
+        context.rotate(Math.sin(time * 0.32 + tile.phase) * 0.18);
+        context.translate(-tile.size / 2, -tile.size / 2);
+        roundedRect(0, 0, tile.size, tile.round ? tile.size / 2 : tile.size * 0.24);
+        context.restore();
       });
 
       if (!still && visible && !reducedMotion.matches) frameId = window.requestAnimationFrame(draw);
