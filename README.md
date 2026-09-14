@@ -41,7 +41,7 @@ Canvas remains the source of truth for announcements, submissions, grades, recor
 
 ## GitHub Pages setup
 
-The current repository is published temporarily as a project site at <https://ctdancer.github.io/CIS-6270/>. The final site will move to the `cis6270` GitHub organization in a repository named `cis6270.github.io`, which will publish at <https://cis6270.github.io/>.
+The official course website is published from `cis6270/cis6270.github.io` at <https://cis6270.github.io/>.
 
 GitHub Pages deploys the repository directly from the root of the `main` branch. In **Settings → Pages**, the source should remain **Deploy from a branch**, with `main` and `/ (root)` selected. HTTPS is enabled automatically after the first successful deployment.
 
