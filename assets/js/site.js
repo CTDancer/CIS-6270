@@ -10,47 +10,19 @@
     .replaceAll("'", "&#039;");
 
   function externalLink(url, label, className = "text-link") {
-    return `<a class="${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}<span class="sr-only"> (opens in a new tab)</span></a>`;
+    return `<a class="${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in a new tab)</span></a>`;
   }
 
-  function setupNavigation() {
-    const button = document.querySelector("[data-nav-toggle]");
-    const nav = document.querySelector("[data-site-nav]");
-    if (button && nav) {
-      button.addEventListener("click", () => {
-        const open = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!open));
-        nav.dataset.open = String(!open);
-      });
-    }
-
-    const current = document.body.dataset.page;
-    document.querySelectorAll("[data-nav-page]").forEach((link) => {
-      if (link.dataset.navPage === current) link.setAttribute("aria-current", "page");
-    });
-  }
-
-  function renderNextClass() {
-    const target = document.querySelector("[data-next-class]");
-    if (!target) return;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const next = data.schedule.find((item) => new Date(`${item.date}T23:59:59`) >= today && item.type !== "break");
-    if (!next) {
-      target.innerHTML = `<p class="eyebrow">Course complete</p><h2>Thank you for a thoughtful semester.</h2>`;
-      return;
-    }
-    target.innerHTML = `
-      <p class="eyebrow">Up next · ${escapeHtml(next.displayDate)}</p>
-      <h2>${escapeHtml(next.title)}</h2>
-      <p>${escapeHtml(next.details)}</p>
-      ${next.milestone ? `<p class="milestone"><span>Milestone</span>${escapeHtml(next.milestone)}</p>` : ""}
-      <a class="arrow-link" href="schedule.html">View the full syllabus <span aria-hidden="true">→</span></a>`;
+  function scheduleMaterials(item) {
+    const lecture = data.lectures.find((entry) => entry.isoDate === item.date);
+    if (!lecture || !lecture.links.length) return '<span class="muted">—</span>';
+    return lecture.links.map((link) => externalLink(link.url, link.label, "mini-link")).join("");
   }
 
   function renderSchedule() {
     const body = document.querySelector("[data-schedule-body]");
     if (!body) return;
+
     body.innerHTML = data.schedule.map((item) => `
       <tr class="schedule-row schedule-${escapeHtml(item.type)}" data-date="${escapeHtml(item.date)}">
         <td data-label="Date"><time datetime="${escapeHtml(item.date)}">${escapeHtml(item.displayDate)}</time></td>
@@ -72,71 +44,123 @@
     }
   }
 
-  function scheduleMaterials(item) {
-    const lecture = data.lectures.find((entry) => entry.isoDate === item.date);
-    if (!lecture) return '<span class="muted">—</span>';
-    return lecture.links.map((link) => externalLink(link.url, link.label, "mini-link")).join("");
-  }
-
-  function renderLectures() {
-    const target = document.querySelector("[data-lecture-list]");
-    if (!target) return;
-    target.innerHTML = data.lectures.map((lecture) => `
-      <article class="resource-card">
-        <div class="resource-number" aria-hidden="true">${String(lecture.number).padStart(2, "0")}</div>
-        <div>
-          <p class="card-kicker">Lecture ${lecture.number} · ${escapeHtml(lecture.date)}</p>
-          <h2>${escapeHtml(lecture.title)}</h2>
-          <div class="button-row">${lecture.links.map((link) => externalLink(link.url, link.label, "button button-secondary")).join("")}</div>
-        </div>
-      </article>`).join("");
-  }
-
-  function renderAssignments() {
-    const target = document.querySelector("[data-assignment-list]");
-    if (!target) return;
-    target.innerHTML = data.assignments.map((assignment, index) => `
-      <article class="assignment-card">
-        <div class="assignment-index">0${index + 1}</div>
-        <div class="assignment-content">
-          <div class="assignment-meta"><span>${escapeHtml(assignment.weight)} of final grade</span><span class="status ${assignment.status === "Available" ? "status-live" : ""}">${escapeHtml(assignment.status)}</span></div>
-          <h2>${escapeHtml(assignment.title)}</h2>
-          <p>${escapeHtml(assignment.description)}</p>
-          <dl class="date-list">
-            <div><dt>Code & writeup due</dt><dd>${escapeHtml(assignment.due)}</dd></div>
-            <div><dt>Defense</dt><dd>${escapeHtml(assignment.defense)}</dd></div>
-          </dl>
-          ${externalLink(assignment.canvasUrl, "Open in Canvas", "arrow-link")}
-        </div>
-      </article>`).join("");
-  }
-
   function renderStaff() {
     const target = document.querySelector("[data-staff-list]");
     if (!target) return;
-    target.innerHTML = data.staff.map((person) => {
-      const initials = person.name.split(" ").filter((part) => !part.includes("Ph.D.")).slice(0, 2).map((part) => part[0]).join("");
-      return `<article class="staff-card">
-        <div class="avatar" aria-hidden="true">${escapeHtml(initials)}</div>
-        <p class="card-kicker">${escapeHtml(person.role)}</p>
-        <h2>${escapeHtml(person.name)}</h2>
-        <p>${escapeHtml(person.affiliation)}</p>
+
+    target.innerHTML = data.staff.map((person) => `
+      <article class="staff-person">
+        <p class="role">${escapeHtml(person.role)}</p>
+        <h3>${escapeHtml(person.name)}</h3>
+        <p class="affiliation">${escapeHtml(person.affiliation)}</p>
         <dl>
           <div><dt>Email</dt><dd><a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a></dd></div>
           <div><dt>Office hours</dt><dd>${escapeHtml(person.officeHours)}</dd></div>
         </dl>
-        ${person.website ? externalLink(person.website, "Visit lab website", "arrow-link") : ""}
-      </article>`;
-    }).join("");
+      </article>`).join("");
+  }
+
+  function setupHeroAnimation() {
+    const canvas = document.querySelector("[data-hero-animation]");
+    if (!canvas) return;
+
+    const hero = canvas.closest(".hero");
+    const context = canvas.getContext("2d");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let tiles = [];
+    let frameId = 0;
+    let visible = true;
+    let width = 0;
+    let height = 0;
+
+    function seeded(index, salt) {
+      const value = Math.sin(index * 9283.17 + salt * 317.41) * 43758.5453;
+      return value - Math.floor(value);
+    }
+
+    function createTiles() {
+      const count = width < 640 ? 34 : Math.min(82, Math.max(50, Math.round(width / 22)));
+      tiles = Array.from({ length: count }, (_, index) => ({
+        x: seeded(index, 1) * width,
+        y: seeded(index, 2) * height,
+        size: 18 + seeded(index, 3) * 58,
+        phase: seeded(index, 4) * Math.PI * 2,
+        speed: 0.55 + seeded(index, 5) * 0.85,
+        red: index % 7 === 0,
+        round: index % 5 === 0
+      }));
+    }
+
+    function resize() {
+      const bounds = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      width = Math.max(1, bounds.width);
+      height = Math.max(1, bounds.height);
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      createTiles();
+      draw(performance.now(), true);
+    }
+
+    function roundedRect(x, y, size, radius) {
+      context.beginPath();
+      context.roundRect(x, y, size, size, radius);
+      context.fill();
+    }
+
+    function draw(timestamp, still = false) {
+      context.clearRect(0, 0, width, height);
+      const time = still ? 0 : timestamp * 0.00018;
+
+      tiles.forEach((tile) => {
+        const driftX = Math.sin(time * tile.speed + tile.phase) * 22;
+        const driftY = Math.cos(time * tile.speed * 0.8 + tile.phase) * 16;
+        const pulse = 0.72 + Math.sin(time * 1.4 + tile.phase) * 0.18;
+        const alpha = (tile.red ? 0.065 : 0.075) * pulse;
+        context.fillStyle = tile.red ? `rgba(189, 48, 48, ${alpha})` : `rgba(84, 119, 187, ${alpha})`;
+        roundedRect(tile.x + driftX, tile.y + driftY, tile.size, tile.round ? tile.size / 2 : tile.size * 0.24);
+      });
+
+      if (!still && visible && !reducedMotion.matches) frameId = window.requestAnimationFrame(draw);
+    }
+
+    function start() {
+      if (frameId || reducedMotion.matches || !visible) return;
+      frameId = window.requestAnimationFrame(draw);
+    }
+
+    function stop() {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      frameId = 0;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting && entry.intersectionRatio > 0.12;
+      if (visible) start();
+      else stop();
+    }, { threshold: [0, 0.12] });
+
+    reducedMotion.addEventListener("change", () => {
+      stop();
+      draw(performance.now(), true);
+      start();
+    });
+    window.addEventListener("resize", resize, { passive: true });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    resize();
+    observer.observe(hero);
+    start();
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    setupNavigation();
-    renderNextClass();
+    if (!data) return;
     renderSchedule();
-    renderLectures();
-    renderAssignments();
     renderStaff();
-    document.querySelectorAll("[data-year]").forEach((element) => { element.textContent = new Date().getFullYear(); });
+    setupHeroAnimation();
   });
 })();

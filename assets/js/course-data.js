@@ -78,20 +78,19 @@ window.COURSE_DATA = {
       number: 1,
       isoDate: "2026-08-25",
       date: "August 25, 2026",
-      title: "Introduction and Probability Foundations",
+      title: "Probability Foundations",
       links: [
-        { label: "All slides", url: "https://docs.google.com/presentation/d/1Q3uyFuB19tVuX4pwTqekG7R7gRt8-MswKQI8Ygt-QMU/edit?usp=sharing" },
-        { label: "Condensed slides", url: "https://docs.google.com/presentation/d/1EKbHi6a7rR2HICHPj8_jcBT85xZtqfqagbtMLAtNM3k/edit?slide=id.g3f40a365991_0_1555#slide=id.g3f40a365991_0_1555" }
+        { label: "Notes PDF", url: "https://docs.google.com/presentation/d/1Q3uyFuB19tVuX4pwTqekG7R7gRt8-MswKQI8Ygt-QMU/export/pdf" }
       ]
     },
     {
       number: 2,
       isoDate: "2026-08-27",
       date: "August 27, 2026",
-      title: "Linear Algebra and the Probability Simplex",
+      title: "The Probability Simplex and Linear Algebra",
       links: [
-        { label: "All slides", url: "https://docs.google.com/presentation/d/1nuVicHBPDY6x2WC8CrD57Vxm_ruNrv2Ce3XDZx7_FfU/edit?usp=sharing" },
-        { label: "Condensed slides", url: "https://docs.google.com/presentation/d/1yo6123XuhUZbfF0L8asl-Vas5kZqZXVgWmf47Z0-eqk/edit?slide=id.g3fa8f46a330_1_1692#slide=id.g3fa8f46a330_1_1692" }
+        { label: "Notes PDF", url: "https://docs.google.com/presentation/d/1nuVicHBPDY6x2WC8CrD57Vxm_ruNrv2Ce3XDZx7_FfU/export/pdf" },
+        { label: "Condensed PDF", url: "https://docs.google.com/presentation/d/1yo6123XuhUZbfF0L8asl-Vas5kZqZXVgWmf47Z0-eqk/export/pdf" }
       ]
     }
   ],

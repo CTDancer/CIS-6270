@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CIS 6270 course mark">
-  <rect width="64" height="64" rx="14" fill="#090d1a"/>
-  <circle cx="32" cy="32" r="21" fill="none" stroke="#2b3656" stroke-width="2"/>
-  <circle cx="32" cy="32" r="12" fill="none" stroke="#5ef2d6" stroke-width="2" stroke-dasharray="10 5"/>
-  <path d="M12 40C23 17 41 17 53 36" fill="none" stroke="#8b75ff" stroke-width="2"/>
-  <circle cx="16" cy="35" r="4" fill="#5ef2d6"/>
-  <circle cx="48" cy="31" r="4" fill="#fa5ea7"/>
-  <circle cx="32" cy="32" r="3" fill="#f7f9ff"/>
+  <rect width="64" height="64" rx="14" fill="#011f5b"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+  <circle cx="32" cy="32" r="12" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="10 5"/>
+  <path d="M12 40C23 17 41 17 53 36" fill="none" stroke="#bd3030" stroke-width="2"/>
+  <circle cx="16" cy="35" r="4" fill="#ffffff"/>
+  <circle cx="48" cy="31" r="4" fill="#990000"/>
+  <circle cx="32" cy="32" r="3" fill="#ffffff"/>
 </svg>
