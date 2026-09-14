@@ -19,7 +19,7 @@ Then open <http://localhost:8000>.
 The public website is a single scrolling page in [`index.html`](index.html). Most recurring course content lives in [`assets/js/course-data.js`](assets/js/course-data.js):
 
 - `schedule`: class dates, topics, exams, breaks, and milestones
-- `lectures`: released public note downloads and code-folder links; each material set lists one or more class dates
+- `lectures`: released Canvas note links and approved code-folder links; each material set lists one or more class dates
 - `assignments`: project descriptions, due dates, and Canvas destinations
 - `staff`: teaching-team contact information and office hours
 
@@ -38,6 +38,7 @@ Only publish material approved for unrestricted public access. Keep the followin
 - assignment solutions or staff-only resources
 
 Canvas remains the source of truth for announcements, submissions, grades, recordings, and restricted course materials.
+Lecture-note links should use their Canvas preview URLs so enrolled students authenticate before viewing the files; do not copy the PDFs into this public repository unless the instructor explicitly approves public distribution.
 
 To share one material set across multiple classes, put all applicable ISO dates in that lecture entry's `dates` array. The site repeats the links in each matching syllabus row and automatically labels the set with its shared dates.
 

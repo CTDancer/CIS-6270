@@ -80,7 +80,7 @@ window.COURSE_DATA = {
       date: "August 25, 2026",
       title: "Probability Foundations",
       links: [
-        { label: "Notes PDF", url: "https://docs.google.com/presentation/d/1Q3uyFuB19tVuX4pwTqekG7R7gRt8-MswKQI8Ygt-QMU/export/pdf" }
+        { label: "Notes PDF", url: "https://canvas.upenn.edu/courses/1948454/files?preview=165906829" }
       ]
     },
     {
@@ -89,8 +89,34 @@ window.COURSE_DATA = {
       date: "August 27, 2026",
       title: "The Probability Simplex and Linear Algebra",
       links: [
-        { label: "Notes PDF", url: "https://docs.google.com/presentation/d/1nuVicHBPDY6x2WC8CrD57Vxm_ruNrv2Ce3XDZx7_FfU/export/pdf" },
-        { label: "Condensed PDF", url: "https://docs.google.com/presentation/d/1yo6123XuhUZbfF0L8asl-Vas5kZqZXVgWmf47Z0-eqk/export/pdf" }
+        { label: "Notes PDF", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166051279" }
+      ]
+    },
+    {
+      number: 3,
+      dates: ["2026-09-01"],
+      date: "September 1, 2026",
+      title: "Maps, Pushforwards, and Changes of Variables",
+      links: [
+        { label: "Condensed PDF", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166286724" }
+      ]
+    },
+    {
+      number: 4,
+      dates: ["2026-09-03"],
+      date: "September 3, 2026",
+      title: "Vector Fields, Probability Conservation, and Optimization",
+      links: [
+        { label: "Condensed PDF", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166324219" }
+      ]
+    },
+    {
+      number: 5,
+      dates: ["2026-09-08", "2026-09-10"],
+      date: "September 8–10, 2026",
+      title: "Flow Matching",
+      links: [
+        { label: "Condensed PDF", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166460336" }
       ]
     }
   ],
