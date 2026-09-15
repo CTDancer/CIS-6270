@@ -294,6 +294,7 @@ section { scroll-margin-top: 4.4rem; }
 .staff-list { display: grid; border-top: 3px solid var(--penn-blue); grid-template-columns: repeat(4, 1fr); }
 .staff-person { min-width: 0; padding: 1.35rem 1rem 0 0; }
 .staff-person + .staff-person { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.staff-photo { display: block; width: 100%; margin: 0 0 1rem; aspect-ratio: 1; object-fit: cover; background: var(--soft-blue); }
 .staff-person .role { margin: 0 0 0.45rem; color: var(--penn-red); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .staff-person h3 { margin: 0 0 0.4rem; font-size: 1.25rem; letter-spacing: -0.025em; }
 .staff-person .affiliation { min-height: 3.4rem; color: var(--muted); font-size: 0.86rem; }

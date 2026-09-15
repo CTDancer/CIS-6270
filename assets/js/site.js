@@ -64,6 +64,7 @@
 
     target.innerHTML = data.staff.map((person) => `
       <article class="staff-person">
+        <img class="staff-photo" src="${escapeHtml(person.photo)}" alt="${escapeHtml(person.photoAlt)}" width="560" height="560" loading="lazy" decoding="async">
         <p class="role">${escapeHtml(person.role)}</p>
         <h3>${escapeHtml(person.name)}</h3>
         <p class="affiliation">${escapeHtml(person.affiliation)}</p>
