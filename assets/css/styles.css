@@ -291,13 +291,22 @@ section { scroll-margin-top: 4.4rem; }
 .policy-list li { padding: 1.15rem 1.5rem 1.15rem 0; border-top: 1px solid var(--line); color: var(--muted); }
 .policy-list li:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid var(--line); }
 
-.staff-list { display: grid; border-top: 3px solid var(--penn-blue); grid-template-columns: repeat(4, 1fr); }
-.staff-person { min-width: 0; padding: 1.35rem 1rem 0 0; }
-.staff-person + .staff-person { padding-left: 1.25rem; border-left: 1px solid var(--line); }
-.staff-photo { display: block; width: 100%; margin: 0 0 1rem; aspect-ratio: 1; object-fit: cover; background: var(--soft-blue); }
+.staff-list { display: grid; border-top: 3px solid var(--penn-blue); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.staff-person {
+  display: grid;
+  min-width: 0;
+  padding: 1.35rem 1.35rem 1.35rem 0;
+  grid-template-columns: clamp(7.5rem, 12vw, 10rem) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.15rem;
+}
+.staff-person:nth-child(even) { padding-right: 0; padding-left: 1.35rem; border-left: 1px solid var(--line); }
+.staff-person:nth-child(n + 3) { border-top: 1px solid var(--line); }
+.staff-photo { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: var(--soft-blue); }
+.staff-details { min-width: 0; }
 .staff-person .role { margin: 0 0 0.45rem; color: var(--penn-red); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .staff-person h3 { margin: 0 0 0.4rem; font-size: 1.25rem; letter-spacing: -0.025em; }
-.staff-person .affiliation { min-height: 3.4rem; color: var(--muted); font-size: 0.86rem; }
+.staff-person .affiliation { color: var(--muted); font-size: 0.86rem; }
 .staff-person dl { margin: 1rem 0 0; }
 .staff-person dl div + div { margin-top: 0.75rem; }
 .staff-person dt { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; }
@@ -317,9 +326,7 @@ section { scroll-margin-top: 4.4rem; }
 @media (max-width: 64rem) {
   .content-grid, .section-heading, .links-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .section-intro { position: static; }
-  .staff-list { grid-template-columns: repeat(2, 1fr); }
-  .staff-person:nth-child(3) { padding-left: 0; border-left: 0; }
-  .staff-person:nth-child(n + 3) { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  .staff-person { grid-template-columns: 7rem minmax(0, 1fr); }
 }
 
 @media (max-width: 48rem) {
@@ -336,9 +343,8 @@ section { scroll-margin-top: 4.4rem; }
   .policy-list { grid-template-columns: 1fr; }
   .policy-list li, .policy-list li:nth-child(even) { padding: 1rem 0; border-left: 0; }
   .staff-list { grid-template-columns: 1fr; }
-  .staff-person, .staff-person + .staff-person, .staff-person:nth-child(3) { padding: 1.2rem 0; border-top: 1px solid var(--line); border-left: 0; }
+  .staff-person, .staff-person:nth-child(even) { padding: 1.2rem 0; border-top: 1px solid var(--line); border-left: 0; }
   .staff-person:first-child { border-top: 0; }
-  .staff-person .affiliation { min-height: 0; }
   .table-shell { border-top: 0; }
   .schedule-table, .schedule-table tbody, .schedule-table tr, .schedule-table td { display: block; width: 100%; }
   .schedule-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }

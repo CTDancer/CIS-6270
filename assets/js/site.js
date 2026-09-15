@@ -65,13 +65,15 @@
     target.innerHTML = data.staff.map((person) => `
       <article class="staff-person">
         <img class="staff-photo" src="${escapeHtml(person.photo)}" alt="${escapeHtml(person.photoAlt)}" width="560" height="560" loading="lazy" decoding="async">
-        <p class="role">${escapeHtml(person.role)}</p>
-        <h3>${escapeHtml(person.name)}</h3>
-        <p class="affiliation">${escapeHtml(person.affiliation)}</p>
-        <dl>
-          <div><dt>Email</dt><dd><a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a></dd></div>
-          <div><dt>Office hours</dt><dd>${escapeHtml(person.officeHours)}</dd></div>
-        </dl>
+        <div class="staff-details">
+          <p class="role">${escapeHtml(person.role)}</p>
+          <h3>${escapeHtml(person.name)}</h3>
+          <p class="affiliation">${escapeHtml(person.affiliation)}</p>
+          <dl>
+            <div><dt>Email</dt><dd><a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a></dd></div>
+            <div><dt>Office hours</dt><dd>${escapeHtml(person.officeHours)}</dd></div>
+          </dl>
+        </div>
       </article>`).join("");
   }
 
