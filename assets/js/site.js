@@ -25,10 +25,10 @@
 
   function scheduleMaterials(item) {
     const lecture = data.lectures.find((entry) => materialDates(entry).includes(item.date));
-    if (!lecture || !lecture.links.length) return '<span class="muted">—</span>';
+    if (!lecture || !lecture.links.length) return '<span class="muted">-</span>';
     const dates = materialDates(lecture);
     const sharedLabel = dates.length > 1
-      ? `<span class="material-note">Shared · ${dates.map(shortDate).join(" &amp; ")}</span>`
+      ? `<span class="material-note">Shared: ${dates.map(shortDate).join(" &amp; ")}</span>`
       : "";
     return sharedLabel + lecture.links.map((link) => externalLink(link.url, link.label, "mini-link")).join("");
   }
@@ -73,6 +73,28 @@
             <div><dt>Email</dt><dd><a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a></dd></div>
             <div><dt>Office hours</dt><dd>${escapeHtml(person.officeHours)}</dd></div>
           </dl>
+        </div>
+      </article>`).join("");
+  }
+
+  function renderProjects() {
+    const target = document.querySelector("[data-project-list]");
+    if (!target) return;
+
+    target.innerHTML = data.assignments.map((project) => `
+      <article class="project-item">
+        <div class="project-heading">
+          <p class="project-weight">${escapeHtml(project.weight)}</p>
+          <h3>${escapeHtml(project.title)}</h3>
+          <p class="project-status">${escapeHtml(project.status)}</p>
+        </div>
+        <div class="project-details">
+          <p>${escapeHtml(project.description)}</p>
+          <dl>
+            <div><dt>Due</dt><dd>${escapeHtml(project.due)}</dd></div>
+            <div><dt>Defense</dt><dd>${escapeHtml(project.defense)}</dd></div>
+          </dl>
+          ${externalLink(project.canvasUrl, "View project in Canvas", "text-link")}
         </div>
       </article>`).join("");
   }
@@ -257,6 +279,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     if (!data) return;
     renderSchedule();
+    renderProjects();
     renderStaff();
     setupHeroAnimation();
   });

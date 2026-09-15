@@ -29,7 +29,7 @@ The approved downloadable syllabus is stored at [`assets/docs/cis6270-syllabus-f
 
 ## Public-material rule
 
-Only publish material approved for unrestricted public access. Keep the following in Canvas or another Penn-authenticated system unless the instructor explicitly approves publication:
+Only publish material approved for unrestricted public access. Keep the following in Canvas or another Penn-authenticated system unless the professor explicitly approves publication:
 
 - student names, groups, submissions, and grades
 - class recordings
@@ -38,7 +38,7 @@ Only publish material approved for unrestricted public access. Keep the followin
 - assignment solutions or staff-only resources
 
 Canvas remains the source of truth for announcements, submissions, grades, recordings, and restricted course materials.
-Lecture-note links should use their Canvas preview URLs so enrolled students authenticate before viewing the files; do not copy the PDFs into this public repository unless the instructor explicitly approves public distribution.
+Lecture-note links should use their Canvas preview URLs so enrolled students authenticate before viewing the files; do not copy the PDFs into this public repository unless the professor explicitly approves public distribution.
 
 To share one material set across multiple classes, put all applicable ISO dates in that lecture entry's `dates` array. The site repeats the links in each matching syllabus row and automatically labels the set with its shared dates.
 
