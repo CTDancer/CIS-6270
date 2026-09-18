@@ -208,6 +208,7 @@ section { scroll-margin-top: 4.4rem; }
   align-items: start;
 }
 .section-intro { position: sticky; top: 7rem; }
+#overview .section-intro { position: static; align-self: center; }
 .section-heading { margin-bottom: 2.8rem; }
 .section-heading > div:last-child > p, .section-heading > p, .compact-heading > p { color: var(--muted); }
 .section-heading .text-link { margin-top: 0.35rem; }
