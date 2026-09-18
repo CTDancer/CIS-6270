@@ -8,7 +8,7 @@ window.COURSE_DATA = {
     canvas: "https://canvas.upenn.edu/courses/1948454",
     ed: "https://edstem.org/us/courses/104834",
     syllabusPdf: "assets/docs/cis6270-syllabus-fall-2026.pdf",
-    updated: "September 14, 2026"
+    updated: "September 18, 2026"
   },
 
   staff: [
@@ -88,7 +88,7 @@ window.COURSE_DATA = {
       date: "August 25, 2026",
       title: "Probability Foundations",
       links: [
-        { label: "Lecture Notes", url: "https://canvas.upenn.edu/courses/1948454/files?preview=165906829" }
+        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1Mly1qfG5fp5FzsOULQ-AniaimkS0haOt/view?usp=sharing" }
       ]
     },
     {
@@ -97,7 +97,7 @@ window.COURSE_DATA = {
       date: "August 27, 2026",
       title: "The Probability Simplex and Linear Algebra",
       links: [
-        { label: "Lecture Notes", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166051279" }
+        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1wnqU6WpaMEpIw4S8kxDkORdrlp2iVKHS/view?usp=sharing" }
       ]
     },
     {
@@ -106,7 +106,7 @@ window.COURSE_DATA = {
       date: "September 1, 2026",
       title: "Maps, Pushforwards, and Changes of Variables",
       links: [
-        { label: "Lecture Notes", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166286724" }
+        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1_KtZ1ebwZcQD5RsGaQSozvJIMlTJ0J2h/view?usp=sharing" }
       ]
     },
     {
@@ -115,7 +115,7 @@ window.COURSE_DATA = {
       date: "September 3, 2026",
       title: "Vector Fields, Probability Conservation, and Optimization",
       links: [
-        { label: "Lecture Notes", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166324219" }
+        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1DXrdC3qJEfTDHnEK3d6Sl0UMhoDCyRCK/view?usp=sharing" }
       ]
     },
     {
@@ -124,7 +124,7 @@ window.COURSE_DATA = {
       date: "September 8-10, 2026",
       title: "Flow Matching",
       links: [
-        { label: "Lecture Notes", url: "https://canvas.upenn.edu/courses/1948454/files?preview=166460336" }
+        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1xgrRXQ7MuFAxp10bdSInHWOKA0n_IQi4/view?usp=sharing" }
       ]
     }
   ],

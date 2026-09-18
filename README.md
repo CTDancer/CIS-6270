@@ -38,7 +38,7 @@ Only publish material approved for unrestricted public access. Keep the followin
 - assignment solutions or staff-only resources
 
 Canvas remains the source of truth for announcements, submissions, grades, recordings, and restricted course materials.
-Lecture-note links should use their Canvas preview URLs so enrolled students authenticate before viewing the files; do not copy the PDFs into this public repository unless the professor explicitly approves public distribution.
+Approved public lecture-note links should use the individual files in the course's [public Google Drive folder](https://drive.google.com/drive/folders/1FycTOJZtBToFHpG9CGpzad7lwLch78gC?usp=sharing). Confirm that each file retains an `anyone with the link` reader permission before publishing its URL. Keep unapproved or restricted materials in Canvas.
 
 To share one material set across multiple classes, put all applicable ISO dates in that lecture entry's `dates` array. The site repeats the links in each matching syllabus row and automatically labels the set with its shared dates.
 
