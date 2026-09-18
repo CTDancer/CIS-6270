@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260918-2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260918-3">
   <script src="assets/js/course-data.js?v=20260918-2" defer></script>
   <script src="assets/js/site.js?v=20260918-1" defer></script>
 </head>
@@ -19,8 +19,8 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="#top" aria-label="CIS 6270 home">
-        <span class="course-mark" aria-hidden="true">6270</span>
-        <span>CIS 6270</span>
+        <img class="penn-engineering-logo" src="assets/penn-engineering-logo-white.png" alt="Penn Engineering">
+        <span class="course-wordmark">CIS 6270</span>
       </a>
       <nav class="term-nav" aria-label="Course semesters">
         <a href="#top" aria-current="page">Fall 2026</a>
@@ -33,7 +33,7 @@
       <canvas class="hero-animation" data-hero-animation aria-hidden="true"></canvas>
       <div class="hero-wash" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="eyebrow">University of Pennsylvania, CIS</p>
+        <p class="eyebrow">University of Pennsylvania</p>
         <h1 id="course-title">Discrete<br>Generative<br>Models</h1>
         <p class="hero-lede">Mathematical, algorithmic, and empirical foundations for generative processes on continuous and discrete state spaces.</p>
         <dl class="hero-facts">
@@ -41,7 +41,13 @@
           <div><dt>Meetings</dt><dd>Tuesdays &amp; Thursdays, 8:30-10:00 a.m.</dd></div>
           <div><dt>Location</dt><dd>Towne 337</dd></div>
         </dl>
-        <a class="button button-light" href="assets/docs/cis6270-syllabus-fall-2026.pdf" target="_blank" rel="noopener noreferrer">Download syllabus PDF<span class="sr-only"> (opens in a new tab)</span></a>
+        <div class="hero-actions">
+          <a class="button button-light" href="assets/docs/cis6270-syllabus-fall-2026.pdf" target="_blank" rel="noopener noreferrer">Course Syllabus<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="hf-button" href="https://huggingface.co/ChatterjeeLab/CIS6270" target="_blank" rel="noopener noreferrer" aria-label="Open CIS 6270 course code on Hugging Face">
+            <span class="hf-logo" aria-hidden="true">🤗</span>
+            <span class="sr-only">Hugging Face course code (opens in a new tab)</span>
+          </a>
+        </div>
       </div>
       <a class="scroll-cue" href="#overview">Scroll to course information <span aria-hidden="true">↓</span></a>
     </section>
@@ -57,6 +63,7 @@
           <dl class="fact-list">
             <div><dt>Professor</dt><dd>Pranam Chatterjee</dd></div>
             <div><dt>Prerequisites</dt><dd>CIS 5190, CIS 5200, or ESE 5460</dd></div>
+            <div><dt>Course Code</dt><dd><a href="https://huggingface.co/ChatterjeeLab/CIS6270" target="_blank" rel="noopener noreferrer">huggingface.co/ChatterjeeLab/CIS6270<span class="sr-only"> (opens in a new tab)</span></a></dd></div>
           </dl>
         </div>
       </div>
@@ -70,7 +77,6 @@
             <h2 id="syllabus-heading">Syllabus</h2>
           </div>
           <div>
-            <p>The schedule is tentative. Each class links to its released materials; shared sets are labeled and repeated in every relevant row.</p>
             <a class="text-link" href="assets/docs/cis6270-syllabus-fall-2026.pdf" target="_blank" rel="noopener noreferrer">Download the official syllabus PDF<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
@@ -89,7 +95,6 @@
       <div class="container">
         <div class="section-heading compact-heading">
           <div><p class="eyebrow">Coursework</p><h2 id="projects-heading">Projects</h2></div>
-          <p>Three group projects move from continuous generative models to discrete methods and a conference-style final paper.</p>
         </div>
         <div class="project-list" data-project-list><p>Loading project information...</p></div>
       </div>

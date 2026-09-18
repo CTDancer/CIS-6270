@@ -95,17 +95,8 @@ section { scroll-margin-top: 4.4rem; }
   text-decoration: none;
 }
 .wordmark:hover { color: var(--white); }
-.course-mark {
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border: 1px solid rgb(255 255 255 / 0.62);
-  border-radius: 50%;
-  color: var(--white);
-  font-size: 0.68rem;
-  letter-spacing: -0.04em;
-}
+.penn-engineering-logo { display: block; width: 7.6rem; height: auto; }
+.course-wordmark { padding-left: 0.75rem; border-left: 1px solid rgb(255 255 255 / 0.34); }
 .term-nav { display: flex; align-items: center; gap: 0.5rem; }
 .term-nav a {
   padding: 0.48rem 0.86rem;
@@ -185,6 +176,21 @@ section { scroll-margin-top: 4.4rem; }
 }
 .button-light { color: var(--penn-blue-deep); background: var(--white); }
 .button-light:hover { color: var(--white); border-color: var(--penn-red-bright); background: var(--penn-red-bright); }
+.hero-actions { display: flex; align-items: center; gap: 0.7rem; }
+.hf-button {
+  display: grid;
+  width: 2.9rem;
+  height: 2.9rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: 50%;
+  color: var(--penn-blue-deep);
+  background: var(--white);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+.hf-button:hover { transform: translateY(-2px); border-color: #ffcc4d; color: var(--penn-blue-deep); background: #ffecb5; }
+.hf-logo { font-size: 1.45rem; line-height: 1; }
 .scroll-cue {
   position: absolute;
   right: 1.8rem;
@@ -225,6 +231,7 @@ section { scroll-margin-top: 4.4rem; }
 }
 .fact-list dt { color: var(--penn-red); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; }
 .fact-list dd { margin: 0; }
+.fact-list a { color: var(--penn-blue); font-weight: 500; overflow-wrap: anywhere; }
 .text-link { display: inline-block; color: var(--penn-red); font-weight: 700; }
 
 .table-shell { border-top: 3px solid var(--penn-blue); }
@@ -374,7 +381,8 @@ section { scroll-margin-top: 4.4rem; }
 
 @media (max-width: 23rem) {
   .wordmark { gap: 0.5rem; font-size: 0.9rem; }
-  .course-mark { width: 2.25rem; height: 2.25rem; }
+  .penn-engineering-logo { width: 6.1rem; }
+  .course-wordmark { display: none; }
   .term-nav a { padding-inline: 0.65rem; font-size: 0.76rem; }
   .hero h1 { font-size: 3.35rem; }
 }
