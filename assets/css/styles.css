@@ -218,7 +218,7 @@ section { scroll-margin-top: 4.4rem; }
 .section-heading { margin-bottom: 2.8rem; }
 .section-heading > div:last-child > p, .section-heading > p, .compact-heading > p { color: var(--muted); }
 .section-heading .text-link { margin-top: 0.35rem; }
-.syllabus-download { align-self: end; }
+.syllabus-download { align-self: end; justify-self: end; }
 .prose { max-width: 48rem; }
 .prose p { color: var(--muted); }
 .prose .lead { color: var(--ink); font-size: clamp(1.2rem, 2.5vw, 1.55rem); line-height: 1.55; }
@@ -357,6 +357,7 @@ section { scroll-margin-top: 4.4rem; }
 @media (max-width: 64rem) {
   .content-grid, .section-heading, .links-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .section-intro { position: static; }
+  .syllabus-download { justify-self: start; }
   .lab-link { justify-self: start; }
   .staff-person { grid-template-columns: 7rem minmax(0, 1fr); }
 }
