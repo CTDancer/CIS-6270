@@ -15,12 +15,21 @@ window.COURSE_DATA = {
     {
       name: "Pranam Chatterjee, Ph.D.",
       role: "Professor",
-      affiliation: "Computer and Information Science",
+      affiliation: "Assistant Professor of Computer and Information Science\nAssistant Professor of Bioengineering",
       photo: "assets/images/staff/pranam-chatterjee.jpg",
       photoAlt: "Portrait of Pranam Chatterjee",
       email: "pranam@engineering.upenn.edu",
       officeHours: "Wednesdays, 5:00-6:00 p.m.",
       website: "https://chatterjeelab.com"
+    },
+    {
+      name: "Sophie Vincoff",
+      role: "Head Teaching Assistant",
+      affiliation: "BE Ph.D. student, Chatterjee Lab",
+      photo: "assets/images/staff/sophie-vincoff.jpg",
+      photoAlt: "Portrait of Sophie Vincoff",
+      email: "svincoff@engineering.upenn.edu",
+      officeHours: "Mondays, 5:00-6:00 p.m."
     },
     {
       name: "Tong Chen",
@@ -39,15 +48,6 @@ window.COURSE_DATA = {
       photoAlt: "Portrait of Rosie Zhang",
       email: "roxiez@engineering.upenn.edu",
       officeHours: "Tuesdays, 5:00-6:00 p.m."
-    },
-    {
-      name: "Sophie Vincoff",
-      role: "Teaching Assistant",
-      affiliation: "BE Ph.D. student, Chatterjee Lab",
-      photo: "assets/images/staff/sophie-vincoff.jpg",
-      photoAlt: "Portrait of Sophie Vincoff",
-      email: "svincoff@engineering.upenn.edu",
-      officeHours: "Mondays, 5:00-6:00 p.m."
     }
   ],
 
