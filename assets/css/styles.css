@@ -310,6 +310,8 @@ section { scroll-margin-top: 4.4rem; }
 .project-details .text-link { color: var(--penn-red); font-size: 0.82rem; font-weight: 700; }
 
 .staff-list { display: grid; border-top: 3px solid var(--penn-blue); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#staff .section-heading { grid-template-columns: minmax(0, 1fr) auto; }
+#staff-heading { white-space: nowrap; }
 .lab-link {
   display: inline-flex;
   min-height: 3rem;
@@ -362,6 +364,8 @@ section { scroll-margin-top: 4.4rem; }
   .content-grid, .section-heading, .links-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .section-intro { position: static; }
   .syllabus-download { justify-self: start; }
+  #staff .section-heading { grid-template-columns: 1fr; }
+  #staff-heading { white-space: normal; }
   .lab-link { justify-self: start; }
   .staff-person { grid-template-columns: 7rem minmax(0, 1fr); }
 }
