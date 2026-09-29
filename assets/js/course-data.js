@@ -204,6 +204,15 @@ window.COURSE_DATA = {
           url: "assets/docs/lectures/cis6270-lecture-3.4-2026-09-24.pdf"
         }
       ]
+    },
+    {
+      number: 11,
+      dates: ["2026-09-29"],
+      date: "September 29, 2026",
+      title: "Masked Diffusion and MDLM",
+      links: [
+        { label: "Lecture Notes", url: "assets/docs/lectures/cis6270-lecture-2026-09-29.pdf" }
+      ]
     }
   ],
 
