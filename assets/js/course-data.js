@@ -59,6 +59,10 @@ window.COURSE_DATA = {
       defense: "September 30, 2026",
       description: "A two-modality empirical study comparing continuous flow matching and diffusion under a matched protocol, with guided generation and an ablated methodological innovation.",
       status: "Available",
+      resources: [
+        { label: "Project Description", url: "assets/docs/projects/cis6270-fall-2026-project-1-description.pdf" },
+        { label: "Paper Template", url: "assets/docs/projects/cis6270-fall-2026-project-1-paper-template.pdf" }
+      ],
       canvasUrl: "https://canvas.upenn.edu/courses/1948454/assignments/15122164"
     },
     {
@@ -78,6 +82,32 @@ window.COURSE_DATA = {
       description: "Extend Project 1, Project 2, or both into a coherent methodological contribution supported by theory, baselines, ablations, multi-seed experiments, guidance analyses, and cross-setting validation.",
       status: "Forthcoming",
       canvasUrl: "https://canvas.upenn.edu/courses/1948454/assignments"
+    }
+  ],
+
+  exams: [
+    {
+      title: "Exam 1",
+      weight: "15%",
+      date: "2026-10-08",
+      displayDate: "October 8, 2026",
+      status: "Exam forthcoming",
+      practiceStatus: "Available",
+      description: "Material taught from August 25 through September 29: mathematical foundations, maps and changes of variables, ODEs and probability conservation, flow matching, SDEs, continuous diffusion, score matching, DDPMs, guidance, masked diffusion, and MDLM foundations",
+      resources: [
+        { label: "Practice Exam 1", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1.pdf" },
+        { label: "Practice Exam 1 - Key", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1-key.pdf" }
+      ]
+    },
+    {
+      title: "Exam 2",
+      weight: "15%",
+      date: "2026-11-19",
+      displayDate: "November 19, 2026",
+      status: "Exam forthcoming",
+      practiceStatus: "Forthcoming",
+      description: "Cumulative coverage of all material taught from August 25 through November 10: mathematical foundations, continuous flow and diffusion models, discrete diffusion, discrete flow matching, guidance, and flow maps",
+      resources: []
     }
   ],
 
@@ -152,6 +182,36 @@ window.COURSE_DATA = {
       title: "Reverse-Time Diffusion and DDPMs",
       links: [
         { label: "Lecture Notes", url: "https://drive.google.com/file/d/1DpLHERt83RKvvHXsIv2_qWhpFl20lPK5/view?usp=sharing" }
+      ]
+    },
+    {
+      number: 9,
+      dates: ["2026-09-22"],
+      date: "September 22, 2026",
+      title: "Diffusion Paths and Probability-Flow ODEs",
+      links: [
+        { label: "Lecture Notes", url: "assets/docs/lectures/cis6270-lecture-3.3-2026-09-22.pdf" }
+      ]
+    },
+    {
+      number: 10,
+      dates: ["2026-09-24"],
+      date: "September 24, 2026",
+      title: "Guidance for Continuous Generative Models",
+      links: [
+        {
+          label: "Lecture Notes",
+          url: "assets/docs/lectures/cis6270-lecture-3.4-2026-09-24.pdf"
+        }
+      ]
+    },
+    {
+      number: 11,
+      dates: ["2026-09-29"],
+      date: "September 29, 2026",
+      title: "Masked Diffusion and MDLM",
+      links: [
+        { label: "Lecture Notes", url: "assets/docs/lectures/cis6270-lecture-2026-09-29.pdf" }
       ]
     }
   ],

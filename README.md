@@ -21,11 +21,29 @@ The public website is a single scrolling page in [`index.html`](index.html). Mos
 - `schedule`: class dates, topics, exams, breaks, and milestones
 - `lectures`: released Canvas note links and approved code-folder links; each material set lists one or more class dates
 - `assignments`: project descriptions, due dates, and Canvas destinations
+- `exams`: exam dates, coverage, availability, and practice exam links
 - `staff`: teaching-team contact information and office hours
 
 Update the course overview, concise grading and policy summary, and footer date in [`index.html`](index.html). The older section URLs redirect into this one-page site so existing bookmarks continue to work.
 
 The approved downloadable syllabus is stored at [`assets/docs/cis6270-syllabus-fall-2026.pdf`](assets/docs/cis6270-syllabus-fall-2026.pdf). Replace that file when a new approved revision is issued, and then reconcile the public HTML and course data with the revised PDF.
+
+## Document uploads
+
+Store public PDFs in `assets/docs/` using these subfolders:
+
+- `lectures/`: locally hosted lecture notes
+- `projects/`: project descriptions and paper templates
+- `exams/`: exams, practice exams, and practice keys
+
+The syllabus PDF remains directly in `assets/docs/`.
+
+The Exams section (`index.html#exams`) already links to these two files. Upload them with these exact names:
+
+- `assets/docs/exams/cis6270-fall-2026-practice-exam-1.pdf`
+- `assets/docs/exams/cis6270-fall-2026-practice-exam-1-key.pdf`
+
+These links will work once the PDFs are uploaded. To release additional exam materials, update the corresponding entry in `exams` in `assets/js/course-data.js`.
 
 ## Public-material rule
 

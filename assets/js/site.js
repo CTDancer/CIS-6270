@@ -51,7 +51,7 @@
 
     const now = new Date();
     now.setHours(0, 0, 0, 0);
-    const upcoming = [...body.querySelectorAll("tr")].find((row) => new Date(`${row.dataset.date}T23:59:59`) >= now);
+    const upcoming = [...body.querySelectorAll("tr")].find((row) => new Date(`${row.dataset.date}T00:00:00`) > now);
     if (upcoming) {
       upcoming.classList.add("is-next");
       upcoming.querySelector("td")?.insertAdjacentHTML("afterbegin", '<span class="next-marker">Next</span>');
@@ -94,7 +94,34 @@
             <div><dt>Due</dt><dd>${escapeHtml(project.due)}</dd></div>
             <div><dt>Defense</dt><dd>${escapeHtml(project.defense)}</dd></div>
           </dl>
-          ${externalLink(project.canvasUrl, "View project in Canvas", "text-link")}
+          <div class="project-links">
+            ${(project.resources || []).map((resource) => externalLink(resource.url, resource.label, "text-link")).join("")}
+            ${externalLink(project.canvasUrl, "View project in Canvas", "text-link")}
+          </div>
+        </div>
+      </article>`).join("");
+  }
+
+  function renderExams() {
+    const target = document.querySelector("[data-exam-list]");
+    if (!target) return;
+
+    target.innerHTML = data.exams.map((exam) => `
+      <article class="project-item">
+        <div class="project-heading">
+          <p class="project-weight">${escapeHtml(exam.weight)}</p>
+          <h3>${escapeHtml(exam.title)}</h3>
+          <p class="project-status">${escapeHtml(exam.status)}</p>
+        </div>
+        <div class="project-details">
+          <p>${escapeHtml(exam.description)}</p>
+          <dl>
+            <div><dt>Date</dt><dd><time datetime="${escapeHtml(exam.date)}">${escapeHtml(exam.displayDate)}</time></dd></div>
+            <div><dt>Practice exam</dt><dd>${escapeHtml(exam.practiceStatus)}</dd></div>
+          </dl>
+          ${exam.resources.length ? `<div class="project-links">
+            ${exam.resources.map((resource) => externalLink(resource.url, resource.label, "text-link")).join("")}
+          </div>` : ""}
         </div>
       </article>`).join("");
   }
@@ -280,6 +307,7 @@
     if (!data) return;
     renderSchedule();
     renderProjects();
+    renderExams();
     renderStaff();
     setupHeroAnimation();
   });
