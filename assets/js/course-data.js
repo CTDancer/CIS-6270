@@ -118,7 +118,7 @@ window.COURSE_DATA = {
       date: "August 25, 2026",
       title: "Probability Foundations",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1FgoZnsKtzF7MrtiGTjfjHGcIg-ZjM1If/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1FgoZnsKtzF7MrtiGTjfjHGcIg-ZjM1If/view?usp=sharing" }
       ]
     },
     {
@@ -127,7 +127,7 @@ window.COURSE_DATA = {
       date: "August 27, 2026",
       title: "The Probability Simplex and Linear Algebra",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1iL_cboLK6cDZ2BhmnQDEmLfnv9dEHDp3/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1iL_cboLK6cDZ2BhmnQDEmLfnv9dEHDp3/view?usp=sharing" }
       ]
     },
     {
@@ -136,7 +136,7 @@ window.COURSE_DATA = {
       date: "September 1, 2026",
       title: "Maps, Pushforwards, and Changes of Variables",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1OrRkfG8yWSYeYVsvjzQAeVE7e4f_flM6/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1OrRkfG8yWSYeYVsvjzQAeVE7e4f_flM6/view?usp=sharing" }
       ]
     },
     {
@@ -145,7 +145,7 @@ window.COURSE_DATA = {
       date: "September 3, 2026",
       title: "Vector Fields, Probability Conservation, and Optimization",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1N5T95OchhhzpD-T4sp-1_aIgXdLn8jLq/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1N5T95OchhhzpD-T4sp-1_aIgXdLn8jLq/view?usp=sharing" }
       ]
     },
     {
@@ -154,7 +154,7 @@ window.COURSE_DATA = {
       date: "September 8, 2026",
       title: "ODEs and Continuous Probability Transport",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1Ls5MnTUZm7psBBNeFG5E7Zl2DT5HqQbb/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1Ls5MnTUZm7psBBNeFG5E7Zl2DT5HqQbb/view?usp=sharing" }
       ]
     },
     {
@@ -163,7 +163,7 @@ window.COURSE_DATA = {
       date: "September 10, 2026",
       title: "Flow Matching",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1tS0H9ed8PqiY2uisT727j9Lq1azzzr5m/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1tS0H9ed8PqiY2uisT727j9Lq1azzzr5m/view?usp=sharing" }
       ]
     },
     {
@@ -172,7 +172,7 @@ window.COURSE_DATA = {
       date: "September 15, 2026",
       title: "SDEs, Fokker-Planck, and Score Matching",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1JrgP_BM8Uyh8FyX_jBd-eerxuyKVBf-L/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1JrgP_BM8Uyh8FyX_jBd-eerxuyKVBf-L/view?usp=sharing" }
       ]
     },
     {
@@ -181,7 +181,7 @@ window.COURSE_DATA = {
       date: "September 17, 2026",
       title: "Reverse-Time Diffusion and DDPMs",
       links: [
-        { label: "Lecture Notes", url: "https://drive.google.com/file/d/1DpLHERt83RKvvHXsIv2_qWhpFl20lPK5/view?usp=sharing" }
+        { label: "Slides", url: "https://drive.google.com/file/d/1DpLHERt83RKvvHXsIv2_qWhpFl20lPK5/view?usp=sharing" }
       ]
     },
     {
@@ -190,7 +190,7 @@ window.COURSE_DATA = {
       date: "September 22, 2026",
       title: "Diffusion Paths and Probability-Flow ODEs",
       links: [
-        { label: "Lecture Notes", url: "assets/docs/lectures/cis6270-lecture-3.3-2026-09-22.pdf" }
+        { label: "Slides", url: "assets/docs/lectures/cis6270-lecture-3.3-2026-09-22.pdf" }
       ]
     },
     {
@@ -200,7 +200,7 @@ window.COURSE_DATA = {
       title: "Guidance for Continuous Generative Models",
       links: [
         {
-          label: "Lecture Notes",
+          label: "Slides",
           url: "assets/docs/lectures/cis6270-lecture-3.4-2026-09-24.pdf"
         }
       ]
@@ -211,7 +211,7 @@ window.COURSE_DATA = {
       date: "September 29, 2026",
       title: "Masked Diffusion and MDLM",
       links: [
-        { label: "Lecture Notes", url: "assets/docs/lectures/cis6270-lecture-2026-09-29.pdf" }
+        { label: "Slides", url: "assets/docs/lectures/cis6270-lecture-2026-09-29.pdf" }
       ]
     }
   ],
