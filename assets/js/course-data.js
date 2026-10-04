@@ -7,8 +7,8 @@ window.COURSE_DATA = {
     location: "Towne 337",
     canvas: "https://canvas.upenn.edu/courses/1948454",
     ed: "https://edstem.org/us/courses/104834",
-    syllabusPdf: "assets/docs/cis6270-syllabus-fall-2026.pdf?v=20261003",
-    updated: "October 3, 2026"
+    syllabusPdf: "assets/docs/cis6270-syllabus-fall-2026.pdf?v=20261004",
+    updated: "October 4, 2026"
   },
 
   staff: [
