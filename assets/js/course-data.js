@@ -82,10 +82,17 @@ window.COURSE_DATA = {
       weight: "15%",
       date: "2026-10-08",
       displayDate: "October 8, 2026",
-      status: "Exam forthcoming",
+      status: "Available",
       practiceStatus: "Available",
+      formulaSheet: {
+        status: "Available",
+        label: "Exam 1 Formula Sheet",
+        url: "assets/docs/exams/cis6270-fall-2026-exam-1-formula-reference.pdf?v=20261012"
+      },
       description: "Material taught from August 25 through September 29: mathematical foundations, maps and changes of variables, ODEs and probability conservation, flow matching, SDEs, continuous diffusion, score matching, DDPMs, guidance, masked diffusion, and MDLM foundations",
       resources: [
+        { label: "Exam 1", url: "assets/docs/exams/cis6270-fall-2026-exam-1.pdf" },
+        { label: "Exam 1 - Key", url: "assets/docs/exams/cis6270-fall-2026-exam-1-key.pdf" },
         { label: "Practice Exam 1", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1.pdf" },
         { label: "Practice Exam 1 - Key", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1-key.pdf" }
       ]
@@ -203,6 +210,15 @@ window.COURSE_DATA = {
       title: "Masked Diffusion and MDLM",
       links: [
         { label: "Lecture Slides", url: "assets/docs/lectures/cis6270-lecture-2026-09-29.pdf" }
+      ]
+    },
+    {
+      number: 12,
+      dates: ["2026-10-06"],
+      date: "October 6, 2026",
+      title: "Continuous-Time Markov Chains",
+      links: [
+        { label: "Lecture Slides", url: "assets/docs/lectures/cis6270-lecture-4.2-2026-10-06.pdf" }
       ]
     }
   ],

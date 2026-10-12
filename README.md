@@ -45,6 +45,8 @@ The Exams section (`index.html#exams`) already links to these two files. Upload 
 
 These links will work once the PDFs are uploaded. To release additional exam materials, update the corresponding entry in `exams` in `assets/js/course-data.js`.
 
+Each exam card also includes a formula reference sheet field. The approved Exam 1 sheet is published at `assets/docs/exams/cis6270-fall-2026-exam-1-formula-reference.pdf`; future sheets remain marked `Forthcoming` until an approved PDF and its `label` and `url` are added to the corresponding `formulaSheet` entry.
+
 ## Public-material rule
 
 Only publish material approved for unrestricted public access. Keep the following in Canvas or another Penn-authenticated system unless the professor explicitly approves publication:
