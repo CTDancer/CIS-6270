@@ -7,8 +7,8 @@ window.COURSE_DATA = {
     location: "Towne 337",
     canvas: "https://canvas.upenn.edu/courses/1948454",
     ed: "https://edstem.org/us/courses/104834",
-    syllabusPdf: "assets/docs/cis6270-syllabus-fall-2026.pdf?v=20261004",
-    updated: "October 4, 2026"
+    syllabusPdf: "assets/docs/cis6270-syllabus-fall-2026.pdf?v=20261012",
+    updated: "October 12, 2026"
   },
 
   staff: [
@@ -66,20 +66,11 @@ window.COURSE_DATA = {
       canvasUrl: "https://canvas.upenn.edu/courses/1948454/assignments/15122164"
     },
     {
-      title: "Project 2 - Discrete Generative Models Workshop",
-      weight: "20%",
-      due: "October 27, 2026 at 8:30 a.m.",
-      defense: "October 28, 2026",
-      description: "Build a discrete generative model with property guidance, appropriate baselines, quantitative evaluation, guidance-strength analyses, and controlled ablations in ICLR workshop format.",
-      status: "Forthcoming",
-      canvasUrl: "https://canvas.upenn.edu/courses/1948454/assignments"
-    },
-    {
-      title: "Final Project - ICML-Ready Paper",
-      weight: "25%",
+      title: "Project 2 - Discrete Generative Models: ICML-Ready Paper",
+      weight: "40%",
       due: "December 3, 2026 at 8:30 a.m.",
       defense: "December 4, 2026",
-      description: "Extend Project 1, Project 2, or both into a coherent methodological contribution supported by theory, baselines, ablations, multi-seed experiments, guidance analyses, and cross-setting validation.",
+      description: "Develop a novel discrete generative formulation and produce an ICML submission-ready paper and code repository. An ICML-ready paper outline is due November 10, 2026 at 8:30 a.m.",
       status: "Forthcoming",
       canvasUrl: "https://canvas.upenn.edu/courses/1948454/assignments"
     }
@@ -101,7 +92,7 @@ window.COURSE_DATA = {
     },
     {
       title: "Exam 2",
-      weight: "15%",
+      weight: "20%",
       date: "2026-11-19",
       displayDate: "November 19, 2026",
       status: "Exam forthcoming",
@@ -232,23 +223,22 @@ window.COURSE_DATA = {
     { date: "2026-10-01", displayDate: "Thu, Oct 1", type: "break", title: "Fall Term Break", details: "October 1-4; no class." },
     { date: "2026-10-06", displayDate: "Tue, Oct 6", type: "lecture", title: "Continuous-Time Markov Chains", details: "Jump rates and rate matrices, waiting times, the master equation, matrix exponentials and transition kernels, masking and uniform noise as rate matrices, stationary distributions, detailed balance, and time reversal." },
     { date: "2026-10-08", displayDate: "Thu, Oct 8", type: "exam", title: "Exam 1", details: "Material taught August 25-September 29: mathematical foundations, maps and changes of variables, ODEs and probability conservation, flow matching, SDEs, continuous diffusion, score matching, DDPMs, guidance, masked diffusion, and MDLM foundations." },
-    { date: "2026-10-13", displayDate: "Tue, Oct 13", type: "lecture", title: "Reverse Rates, Guidance, and the Rate-Matching Loss", details: "Reverse rates as probability ratios, the denoiser parametrization, Doob's h-transform for guidance, the path KL as a sum of rate errors, the rate-matching likelihood bound, and sampling with correctors.", milestone: "Project 2 assigned" },
+    { date: "2026-10-13", displayDate: "Tue, Oct 13", type: "lecture", title: "Reverse Rates, Guidance, and the Rate-Matching Loss", details: "Reverse rates as probability ratios, the denoiser parametrization, Doob's h-transform for guidance, the path KL as a sum of rate errors, the rate-matching likelihood bound, and sampling with correctors." },
     { date: "2026-10-15", displayDate: "Thu, Oct 15", type: "lecture", title: "Discrete Diffusion Models and Guided Sequence Generation", details: "Structured and uniform corruption, score entropy, block diffusion, learned per-token rates, simplex diffusion, a full implementation for DNA, planner-guided sampling, guided peptide design, and any-length generation." },
     { date: "2026-10-20", displayDate: "Tue, Oct 20", type: "lecture", title: "Discrete Flow Matching with Jump Rates", details: "Probability paths, jump rates as probability velocities, the master equation as a continuity equation, couplings and mixture paths, conditional and marginal velocities, the denoiser and cross-entropy training, and sampling." },
-    { date: "2026-10-22", displayDate: "Thu, Oct 22", type: "lecture", title: "Correctors, Kinetic-Optimal Paths, and Edit Flows", details: "Schedules and sample quality, backward-velocity correctors, multimodal discrete flows, kinetic-optimal paths, insertions and deletions with Edit Flows, simplex-valued states, and Dirichlet conditional paths." },
-    { date: "2026-10-27", displayDate: "Tue, Oct 27", type: "lecture", title: "Dirichlet, Fisher-Rao, and Gumbel-Softmax Flows", details: "Dirichlet velocities, scores, and guidance, Fisher information geometry and spherical geodesics, Gumbel-max sampling, differentiable Gumbel-softmax paths, temperature schedules, and the replicator equation.", milestone: "Project 2 code and writeup due at 8:30 a.m." },
-    { date: "2026-10-28", displayDate: "Wed, Oct 28", type: "defense", title: "Project 2 Defenses", details: "Discrete Generative Models Workshop: 10-minute presentation and 20-minute Q&A per group." },
+    { date: "2026-10-22", displayDate: "Thu, Oct 22", type: "lecture", title: "Correctors, Kinetic-Optimal Paths, and Edit Flows", details: "Schedules and sample quality, backward-velocity correctors, multimodal discrete flows, kinetic-optimal paths, insertions and deletions with Edit Flows, simplex-valued states, and Dirichlet conditional paths.", milestone: "Project 2 assigned" },
+    { date: "2026-10-27", displayDate: "Tue, Oct 27", type: "lecture", title: "Dirichlet, Fisher-Rao, and Gumbel-Softmax Flows", details: "Dirichlet velocities, scores, and guidance, Fisher information geometry and spherical geodesics, Gumbel-max sampling, differentiable Gumbel-softmax paths, temperature schedules, and the replicator equation." },
     { date: "2026-10-29", displayDate: "Thu, Oct 29", type: "lecture", title: "Guidance, Rectification, and Multi-Objective Refinement", details: "Guidance as an exact h-transform, predictor-free and Taylor-approximated guidance, multi-objective guidance, reflow and endpoint recoupling, total correlation, reward-tilted targets, and Metropolis-Hastings refinement." },
-    { date: "2026-11-03", displayDate: "Tue, Nov 3", type: "lecture", title: "Flow Maps and the Three Training Identities", details: "Finite-interval flow maps, the identity, cocycle, and tangent axioms, the Jacobian equation and Liouville's formula, the Lagrangian, Eulerian, and composition identities, and MeanFlow.", milestone: "Final project assigned" },
+    { date: "2026-11-03", displayDate: "Tue, Nov 3", type: "lecture", title: "Flow Maps and the Three Training Identities", details: "Finite-interval flow maps, the identity, cocycle, and tangent axioms, the Jacobian equation and Liouville's formula, the Lagrangian, Eulerian, and composition identities, and MeanFlow." },
     { date: "2026-11-05", displayDate: "Thu, Nov 5", type: "lecture", title: "Consistency, Distillation, and Discrete Flow Maps", details: "Jacobian-vector products, shortcut and consistency models, trajectory error bounds, distillation and self-distillation, a worked implementation, the two-time denoiser on the simplex, and discrete flow maps." },
-    { date: "2026-11-10", displayDate: "Tue, Nov 10", type: "lecture", title: "Stochastic, Expanding, and Guided Flow Maps", details: "Solution maps of SDEs, strong stochastic flow maps with the noise path as an input, expansion and transport with birth events, variable-length generation, reward-tilted endpoints, value-gradient guidance, and a synthesis." },
+    { date: "2026-11-10", displayDate: "Tue, Nov 10", type: "lecture", title: "Stochastic, Expanding, and Guided Flow Maps", details: "Solution maps of SDEs, strong stochastic flow maps with the noise path as an input, expansion and transport with birth events, variable-length generation, reward-tilted endpoints, value-gradient guidance, and a synthesis.", milestone: "Project 2 outline due at 8:30 a.m." },
     { date: "2026-11-12", displayDate: "Thu, Nov 12", type: "lecture", title: "Optimal Transport, from Monge to Sinkhorn", details: "Couplings, the Monge and Kantorovich problems, duality and complementary slackness, Wasserstein distances, Brenier's theorem, the Benamou-Brenier dynamic formulation, entropic regularization, and the Sinkhorn algorithm." },
     { date: "2026-11-17", displayDate: "Tue, Nov 17", type: "review", title: "Exam 2 Review", details: "Cumulative review of all material taught from August 25 through November 10, with emphasis on discrete diffusion, discrete flow matching, guidance, and flow maps." },
     { date: "2026-11-19", displayDate: "Thu, Nov 19", type: "exam", title: "Exam 2", details: "Cumulative coverage of all material taught from August 25 through November 10: mathematical foundations, continuous flow and diffusion models, discrete diffusion, discrete flow matching, guidance, and flow maps." },
     { date: "2026-11-24", displayDate: "Tue, Nov 24", type: "break", title: "No class", details: "" },
     { date: "2026-11-26", displayDate: "Thu, Nov 26", type: "break", title: "Thanksgiving Break", details: "November 26-29; no class." },
     { date: "2026-12-01", displayDate: "Tue, Dec 1", type: "lecture", title: "Continuous Schrödinger Bridges", details: "Path-space relative entropy, the static bridge and Schrödinger potentials, Girsanov's formula, stochastic control and Hamilton-Jacobi-Bellman, Doob's h-transform, and iterative proportional and Markovian fitting." },
-    { date: "2026-12-03", displayDate: "Thu, Dec 3", type: "lecture", title: "Discrete Schrödinger Bridges and Course Synthesis", details: "Simulation-free score and flow matching, bridges for jump processes, discrete Doob transforms, bridge matching on graphs and categorical sequences, branched and entangled bridges, and course synthesis.", milestone: "Final project code and writeup due at 8:30 a.m." },
-    { date: "2026-12-04", displayDate: "Fri, Dec 4", type: "defense", title: "Final Project Defenses", details: "ICML-Ready Paper: 10-minute presentation and 20-minute Q&A per group." }
+    { date: "2026-12-03", displayDate: "Thu, Dec 3", type: "lecture", title: "Discrete Schrödinger Bridges and Course Synthesis", details: "Simulation-free score and flow matching, bridges for jump processes, discrete Doob transforms, bridge matching on graphs and categorical sequences, branched and entangled bridges, and course synthesis.", milestone: "Project 2 code and paper due at 8:30 a.m." },
+    { date: "2026-12-04", displayDate: "Fri, Dec 4", type: "defense", title: "Project 2 Defenses", details: "ICML-Ready Paper: 10-minute presentation and 20-minute Q&A per group." }
   ]
 };
