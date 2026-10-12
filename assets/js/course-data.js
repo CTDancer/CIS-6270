@@ -96,7 +96,7 @@ window.COURSE_DATA = {
       formulaSheet: {
         status: "Available",
         label: "Exam 1 Formula Sheet",
-        url: "assets/docs/exams/cis6270-fall-2026-exam-1-formula-reference.pdf"
+        url: "assets/docs/exams/cis6270-fall-2026-exam-1-formula-reference.pdf?v=20261012"
       },
       description: "Material taught from August 25 through September 29: mathematical foundations, maps and changes of variables, ODEs and probability conservation, flow matching, SDEs, continuous diffusion, score matching, DDPMs, guidance, masked diffusion, and MDLM foundations",
       resources: [
