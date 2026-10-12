@@ -102,6 +102,25 @@
       </article>`).join("");
   }
 
+  function examLinkRow(label, links) {
+    if (!links.length) return "";
+    return `<div class="exam-link-row"><strong class="exam-link-label">${escapeHtml(label)}</strong><div class="project-links">${links.map((link) => externalLink(link.url, link.label, "text-link")).join("")}</div></div>`;
+  }
+
+  function renderExamLinkRows(exam) {
+    const resources = exam.resources || [];
+    const examLinks = resources.filter((resource) => !resource.label.startsWith("Practice"));
+    if (exam.formulaSheet?.url) {
+      examLinks.push({
+        label: exam.formulaSheet.label || "Formula Sheet",
+        url: exam.formulaSheet.url
+      });
+    }
+    const practiceLinks = resources.filter((resource) => resource.label.startsWith("Practice"));
+    const rows = examLinkRow("Exam", examLinks) + examLinkRow("Practice", practiceLinks);
+    return rows ? `<div class="exam-link-groups">${rows}</div>` : "";
+  }
+
   function renderExams() {
     const target = document.querySelector("[data-exam-list]");
     if (!target) return;
@@ -117,12 +136,9 @@
           <p>${escapeHtml(exam.description)}</p>
           <dl>
             <div><dt>Date</dt><dd><time datetime="${escapeHtml(exam.date)}">${escapeHtml(exam.displayDate)}</time></dd></div>
-            <div><dt>Practice exam</dt><dd>${escapeHtml(exam.practiceStatus)}</dd></div>
+            ${(exam.resources || []).some((resource) => resource.label.startsWith("Practice")) ? "" : `<div><dt>Practice exam</dt><dd>${escapeHtml(exam.practiceStatus)}</dd></div>`}
           </dl>
-          ${exam.resources.length || exam.formulaSheet?.url ? `<div class="project-links">
-            ${exam.resources.map((resource) => externalLink(resource.url, resource.label, "text-link")).join("")}
-            ${exam.formulaSheet?.url ? externalLink(exam.formulaSheet.url, exam.formulaSheet.label || "Formula Sheet", "text-link") : ""}
-          </div>` : ""}
+          ${renderExamLinkRows(exam)}
         </div>
       </article>`).join("");
   }

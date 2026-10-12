@@ -91,7 +91,7 @@ window.COURSE_DATA = {
       weight: "15%",
       date: "2026-10-08",
       displayDate: "October 8, 2026",
-      status: "Exam forthcoming",
+      status: "Available",
       practiceStatus: "Available",
       formulaSheet: {
         status: "Available",
@@ -100,6 +100,8 @@ window.COURSE_DATA = {
       },
       description: "Material taught from August 25 through September 29: mathematical foundations, maps and changes of variables, ODEs and probability conservation, flow matching, SDEs, continuous diffusion, score matching, DDPMs, guidance, masked diffusion, and MDLM foundations",
       resources: [
+        { label: "Exam 1", url: "assets/docs/exams/cis6270-fall-2026-exam-1.pdf" },
+        { label: "Exam 1 - Key", url: "assets/docs/exams/cis6270-fall-2026-exam-1-key.pdf" },
         { label: "Practice Exam 1", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1.pdf" },
         { label: "Practice Exam 1 - Key", url: "assets/docs/exams/cis6270-fall-2026-practice-exam-1-key.pdf" }
       ]
